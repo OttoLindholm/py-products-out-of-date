@@ -47,4 +47,6 @@ class TetOutdatedProduct(TestCase):
             mocked_date: MagicMock
     ) -> None:
         mocked_date.date.today.return_value = datetime.date(2022, 2, 11)
-        assert outdated_products(self.products) == ["salmon", "chicken", "duck"]
+        assert outdated_products(self.products) == ["salmon",
+                                                    "chicken",
+                                                    "duck"]
